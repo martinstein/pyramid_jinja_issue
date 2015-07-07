@@ -9,8 +9,10 @@ def main(global_config, **settings):
 
     # This one's broken because of the issue
     config.add_route('broken', '/broken')
-    # This one works
+
+    # These ones work
     config.add_route('works', '/works')
+    config.add_route('works2', '/works2')
 
     config.scan()
 
