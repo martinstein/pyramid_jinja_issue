@@ -1,10 +1,8 @@
-from pyramid.renderers import render
-from pyramid.response import Response
 from pyramid.view import view_config
 
 
-@view_config(route_name='broken', renderer='email/mytemplate.html')
-@view_config(route_name='works2', renderer='pyramid_jinja_issue:templates/email/mytemplate.html')
-@view_config(route_name='works', renderer='mytemplate.html')
+@view_config(route_name='broken', renderer='email/other_template.html')
+@view_config(route_name='works2', renderer='pyramid_jinja_issue:templates/email/other_template.html')
+@view_config(route_name='works', renderer='some_template.html')
 def my_view(request):
     return {"name": "Bruce"}
